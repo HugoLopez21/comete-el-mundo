@@ -1,0 +1,40 @@
+@import './colors';
+
+* {
+    border: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.2s linear;
+    color: inherit
+}
+
+html {
+    scroll-behavior: smooth;
+    background-color: $color-light;
+    font-family: "Poppins", sans-serif;
+}
+
+
+
+h1,
+h2,
+h3{
+    font-size: 1.7rem;
+    margin: 0;
+    line-height: 120%;
+    color: $color-dark;
+    text-shadow: $title-shadow;
+}
+
+p {
+    color: $color-dark-text;
+}
+
+
+.container {
+    width: 100%; //100% de ancho
+    max-width: 1400px; //Maximo de encho del contenedor
+    margin-inline: auto; //Alineamiento horizontal
+}

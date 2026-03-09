@@ -1,0 +1,117 @@
+@import 'config';
+@import 'functions/functions';
+@import 'functions/get-color';
+@import 'functions/get-size';
+@import 'functions/get-utility-value';
+@import 'mixins/media-query';
+@import 'mixins/mixins';
+@import 'mixins/generate-utility-classes';
+@import 'mixins/apply-utility';
+@import 'generator/generator';
+
+@import 'modules/shadows';
+@import 'modules/general';
+@import 'modules/typo';
+@import 'modules/colors';
+@import 'modules/buttons';
+
+@import 'sections/prominent';
+@import 'sections/header';
+@import 'sections/review';
+@import 'sections/products';
+@import 'sections/hero';
+@import 'sections/about';
+@import 'sections/footer';
+
+@media (max-width: 1400px){
+    .container{
+        max-width: 80%;
+    }
+
+    .prominent-container{
+        padding: 20px;
+    }
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+
+@media (max-width: 767px) {
+    .container{
+        max-width: 90%;
+    }
+
+    .nav-links {
+        display: none; 
+    }
+
+
+    /* seccion hero*/
+
+    .hero-grid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .carousel-text {
+        align-items: center;
+        padding: 0;
+    }
+
+
+    
+    .carousel-images img {
+        width: 100%;
+        height: auto;
+    }
+
+    .carousel-dots {
+        justify-content: center; 
+    }
+
+    /* seccion prominent */
+    .prominent-container {
+        display: flex;
+        flex-direction: column; 
+        padding: 20px;
+    }
+
+    .prom-info {
+        padding: 3.2rem 1.2rem; 
+        gap: 1rem;
+        text-align: left;
+    }
+
+    .prom-img {
+        max-width: 100%;
+        max-height: 30vh;
+    }
+    .prom-btns {
+        display: flex;
+        flex-direction: column; 
+        gap: 10px;
+    }
+
+    /* seccion about*/
+    .about-container {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .about-carousel{
+        width: 100%;
+        height: 300px;
+    }
+
+    .about-text {
+        padding: 0;
+        text-align: left;
+    }
+
+    .size3 {
+        font-size: 1.8rem;
+    }
+
+}

@@ -1,0 +1,183 @@
+@import 'modules/colors';
+/// BASE SIZE
+/// All calculations are based on this. It’s recommended that
+/// you keep it at 1rem because that is the root font size. You
+/// can set it to whatever you like and whatever unit you like.
+///
+$gorko-base-size: 1rem !default;
+
+/// SIZE SCALE
+/// This is a Major Third scale that powers all the utilities that
+/// it is relevant for (font-size, margin, padding). All items are
+/// calcuated off the base size, so change that and cascade across
+/// your whole project.
+///
+$gorko-size-scale: (
+  '300': $gorko-base-size * 0.8,
+  '400': $gorko-base-size,
+  '500': $gorko-base-size * 1.25,
+  '600': $gorko-base-size * 1.6,
+  '700': $gorko-base-size * 2,
+  '900': $gorko-base-size * 3) !default;
+
+/// COLORS
+/// Colors are shared between backgrounds and text by default.
+/// You can also use them to power borders, fills or shadows, for example.
+///
+$gorko-colors: (
+  'primary': $color-primary,
+  'secondary': $color-secondary,
+  'dark': $color-dark,
+  'light': $color-light,
+  'white': $color-white,
+  'beige-dark': $brand-beige-dark,
+  'border': $brand-border) !default;
+
+/// CORE CONFIG
+/// This powers everything from utility class generation to breakpoints
+/// to enabling/disabling pre-built components/utilities.
+///
+$gorko-config: (
+  'namespace': ('prefix': '',
+    'classes': true,
+    'css-vars': false,
+  ),
+  'bg': ('items': $gorko-colors,
+    'output': 'standard',
+    'property': 'background'
+  ),
+  'color': ('items': $gorko-colors,
+    'output': 'standard',
+    'property': 'color'
+  ),
+  'box': ('items': ('block': 'block',
+      'flex': 'flex',
+      'grid' : 'grid',
+      'hide': 'none',
+      'show': 'inherit'
+    ),
+    'output': 'responsive',
+    'property': 'display'
+  ),
+  // Alineación horizontal (Justify Content)
+  'justify': ('items': ('start': 'flex-start',
+      'end': 'flex-end',
+      'center': 'center',
+      'between': 'space-between',
+      'around': 'space-around'
+    ),
+    'output': 'standard',
+    'property': 'justify-content'
+  ),
+  // Alineación vertical (Align Items)
+  'items': ('items': ('start': 'flex-start',
+      'end': 'flex-end',
+      'center': 'center',
+      'stretch': 'stretch'
+    ),
+    'output': 'standard',
+    'property': 'align-items'
+  ),
+  // Dirección de Flex (Column o Row)
+  'direction': ('items': ('column': 'column',
+      'row': 'row'
+    ),
+    'output': 'standard',
+    'property': 'flex-direction'
+  ),
+  // Espaciado entre elementos (Gap) - Muy útil para Grid y Flex
+  'gap': ('items': $gorko-size-scale,
+    'output': 'standard',
+    'property': 'gap'
+  ),
+  // Radio de borde (Border Radius)
+  'radius': ('items': ('sm': '0.125rem',
+      'md': '0.25rem',
+      'lg': '0.5rem',
+      'full': '9999px'
+    ),
+    'output': 'standard',
+    'property': 'border-radius'
+  ),
+  'font': ('items': ('base': 'Helvetica, Arial, sans-serif'
+    ),
+    'output': 'standard',
+    'property': 'font-family'
+  ),
+  'gap-top': ('items': $gorko-size-scale,
+    'output': 'standard',
+    'property': 'margin-top'
+  ),
+  'gap-right': ('items': $gorko-size-scale,
+    'output': 'standard',
+    'property': 'margin-right'
+  ),
+  'gap-bottom': ('items': $gorko-size-scale,
+    'output': 'standard',
+    'property': 'margin-bottom'
+  ),
+  'gap-left': ('items': $gorko-size-scale,
+    'output': 'standard',
+    'property': 'margin-left'
+  ),
+  'pad':('items': $gorko-size-scale,
+    'output': 'standard',
+    'property': 'padding'
+  ),
+
+  'pad-top': ('items': $gorko-size-scale,
+    'output': 'standard',
+    'property': 'padding-top'
+  ),
+  'pad-right': ('items': $gorko-size-scale,
+    'output': 'standard',
+    'property': 'padding-right'
+  ),
+  'pad-bottom': ('items': $gorko-size-scale,
+    'output': 'standard',
+    'property': 'padding-bottom'
+  ),
+  'pad-left': ('items': $gorko-size-scale,
+    'output': 'standard',
+    'property': 'padding-left'
+  ),
+  'stack': ('items': ('300': 0,
+      '400': 10,
+      '500': 20,
+      '600': 30,
+      '700': 40),
+    'output': 'standard',
+    'property': 'z-index'
+  ),
+  'text': ('items': $gorko-size-scale,
+    'output': 'responsive',
+    'property': 'font-size'
+  ),
+  'weight': ('items': ('light': '300',
+      'regular': '400',
+      'bold': '700'
+    ),
+    'output': 'standard',
+    'property': 'font-weight'
+  ),
+  'width': ('items': ('full': '100%',
+      'half': percentage(1/2),
+      'quarter': percentage(1/4),
+      'third': percentage(1/3)),
+    'output': 'responsive',
+    'property': 'width'
+  ),
+  'breakpoints': ('sm': '(min-width: 36em)',
+    'md': '(min-width: 48em)',
+    'lg': '(min-width: 62em)'
+  ),
+  'pos': ('items': ('static': 'static',
+      'fixed': 'fixed',
+      'absolute': 'absolute',
+      'relative': 'relative'
+    ),
+    'output': 'standard',
+    'property': 'position'
+  ),
+
+  ) !default;

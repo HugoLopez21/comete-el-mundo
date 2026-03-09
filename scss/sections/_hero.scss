@@ -1,0 +1,78 @@
+.hero-grid {
+    grid-template-columns: 1.5fr 1fr; // Esatblece mas tamaño en la columna izquierda
+}
+
+.carousel-images {
+    overflow: hidden; 
+    aspect-ratio: 16 / 9; // Relación de aspecto de la imagen proporcionada en 16:9
+    box-shadow: $container-shadow;
+
+    .slide-image {
+        flex: 0 0 100%; 
+        transition: transform 0.8s ease-in-out;
+
+
+        img {
+            //Ajusta la imagen para que ocupe todo el espacio disponible
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+        }
+    }
+}
+
+
+.carousel-text {
+    position: relative;
+    padding-left: 2rem;
+
+    h2 {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        color: $color-dark-text;
+        margin-bottom: 2rem;
+    }
+
+    .text-container {
+        //CENTRAR ELEMENTOS DEL DIV
+        display: none;
+        width: 70%;
+
+        &.active {
+            display: block;
+            animation: heroSlide 0.6s ease both;
+        }
+    }
+}
+
+.carousel-dots {
+    .dot {
+        width: 12px;
+        height: 12px;
+        background: rgba($color-dark, 0.4);
+        cursor: pointer;
+        transition: all 0.4s ease;
+
+        &.active {
+            //Cambia el punto seleccionado
+            background: $color-secondary;
+            width: 40px;
+            box-shadow: 0 4px 10px rgba($color-secondary, 0.3);
+        }
+    }
+}
+
+@keyframes heroSlide {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

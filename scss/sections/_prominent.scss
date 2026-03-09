@@ -1,0 +1,27 @@
+.prominent-container {
+    grid-template-columns: 1fr 1.2fr; // Columna derecha mas grande
+
+
+    .prom-info {
+        width: 100%;
+        height: 100%;
+        border-radius: 24px;
+        position: relative;
+        overflow: hidden; //Esconde lo que se sobrepone
+    }
+
+    .prom-img {
+        width: 100%; // Ancho del 100% del contenedor
+        height: 400px; //Ocupa la mitad de la altura del contenedor
+
+
+        img {
+            //Ajusta la imagen para que ocupe todo el espacio disponible
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 24px;
+            box-shadow: $container-shadow;
+        }
+    }
+}

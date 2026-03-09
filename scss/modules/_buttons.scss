@@ -1,0 +1,53 @@
+.btn {
+    //Estilo general de los notones
+    padding: 0.75rem 2rem;
+    border-radius: 12px; // Redondear los bordes
+    font-weight: 600; // Hacer mas gorda la letra
+    cursor: pointer; // Cambiar el cursor
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-align: center; //Alinear texto al centro
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); //Añade sombra
+    background: linear-gradient(135deg, $color-primary 0%, darken($color-primary, 5%) 100%); //Fondo con gradiente lineal
+    color: $color-white; //Color del texto
+
+    &:hover {
+        background: linear-gradient(135deg, lighten($color-primary, 5%) 0%, $color-primary 100%); //Hace el fondo mas claro
+        transform: translateY(-3px); //Sube el boton 
+        box-shadow: 0 10px 15px -3px rgba($color-primary, 0.3); //Cambia la sombra
+    }
+
+    &:active {
+        transform: translateY(-1px);
+        box-shadow: 0 5px 10px -3px rgba($color-primary, 0.3);
+    }
+
+}
+
+    
+
+
+.btn-secondary {
+    //Estilo secundario de botones
+    background: linear-gradient(135deg, $brand-border 0%, darken($brand-border, 5%) 100%);
+    color: $color-dark;
+    border: 1px solid $brand-border; //Añadir borde
+
+    &:hover {
+        background: $color-light;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    }
+}
+
+
+.cta {
+    // Call to action button
+    background: linear-gradient(135deg, $color-secondary 0%, darken($color-secondary, 10%) 100%);
+    color: $color-white;
+
+    &:hover {
+        background: linear-gradient(135deg, lighten($color-secondary, 5%) 0%, $color-secondary 100%);
+        transform: translateY(-4px) scale(1.02);
+        box-shadow: 0 12px 20px -5px rgba($color-secondary, 0.4);
+    }
+}

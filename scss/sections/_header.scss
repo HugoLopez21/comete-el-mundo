@@ -1,0 +1,45 @@
+header {
+    position: sticky; // Se mantiene fijo
+    top: 0; // Lo posiciona arriba del todo
+    height: 5rem; //Altura del contenedor
+    z-index: 999; // Orden de la capa
+    box-shadow: $container-shadow;
+    font-size: 1.2rem;
+    color: $color-dark;
+
+    .brand-logo {
+        //Establece el tamaño de la imagen del logo
+        width: 55px;
+        height: auto
+    }
+
+    .nav-links {
+        a {
+            position: relative;
+            padding: 0.5rem 0;
+            color: $color-dark;;
+            transition: color 0.3s ease;
+    
+            //Crear un linea de subrallado debajo del enlace
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: -4px;
+                left: 0;
+                width: 0;
+                height: 3px;
+                background-color: $color-secondary;
+                transition: width 0.3s ease;
+                border-radius: 2px;
+            }
+
+            &:hover {
+                color: $color-primary; //Cambia de color al principal
+                &::after {
+                    width: 100%; // Hace que aparezca la linea de subrallado
+                }
+            }
+        }
+    }
+}
+

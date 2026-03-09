@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cómete el Mundo | Inicio</title>
+    <link rel="stylesheet" href="./scss/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Montserrat:wght@900&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<header class="header pad-400 box-flex justify-center items-center bg-beige-dark">
+    <nav class="navbar container box-flex justify-between items-center">
+        <a href="#home" class="logo box-flex items-center gap-300">
+            <img src="./media/logo.png" alt="Cómete el Mundo" class="brand-logo" />
+        </a>
+        <div class="nav-links box-flex justify-center gap-700">
+            <a href="#home">Inicio</a>
+            <a href="#products">Nuestra carta</a>
+            <a href="#about">Sobre nosotros</a>
+            <a href="#contact-location">Contacto</a>
+        </div>
+        <div class="header-actions box-flex justify-center gap-600">
+            <button class="btn btn-secondary">Login</button>
+            <button class="cart-button" id="cart-button" aria-label="Abrir cesta">
+                <span class="cart-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M7 8V7a5 5 0 0 1 10 0v1h2a1 1 0 0 1 .99 1.141l-1.5 10A2 2 0 0 1 16.51 21h-9a2 2 0 0 1-1.98-1.859l-1.5-10A1 1 0 0 1 5 8h2zm2 0h6V7a3 3 0 0 0-6 0v1z" />
+                    </svg>
+                </span>
+                <span class="cart-count" id="cart-count">0</span>
+            </button>
+
+        </div>
+    </nav>
+</header>
+
+<body>
+    <main>
+        <!-- Sección HERO-->
+        <section id="home" class="hero">
+            <div class="hero-content ">
+                <div class="hero-grid box-grid tems-center gap-600">
+                    <div class="carousel-images box-flex">
+                        <div class="slide-image" id="img-1">
+                            <img src="./media/foto1.jpg" alt="">
+                        </div>
+                        <div class="slide-image" id="img-2">
+                            <img src="./media/3.jpg" alt="">
+                        </div>
+                    </div>
+                    <!-- SLIDES -->
+                    <div class="carousel-text box-flex direction-column justify-center">
+                        <!-- SLIDE 1-->
+                        <div class="text-container active" id="info-1">
+                            <h2>SLIDE 1</h2>
+                            <p>En Cómete el Mundo cocinamos como en casa, para que tú solo tengas que disfrutar. Cada
+                                día preparamos comida casera para llevar con ingredientes frescos, recetas
+                                tradicionales.</p>
+                            <button class="btn cta" data-type="primary">Acción</button>
+                        </div>
+
+                        <!-- SLIDE 2-->
+                        <div class="text-container" id="info-2">
+                            <h2>SLIDE 2</h2>
+                            <p>Somos especialistas en pollo asado al carbón, jugoso, sabroso y con ese aroma
+                                inconfundible que solo el fuego lento puede dar.</p>
+                            <button class="btn" data-type="primary">Pedir ahora</button>
+                        </div>
+                        <!-- INDICADORES SLIDE-->
+                        <nav class="carousel-dots box-flex gap-300 gap-top-600">
+                            <button class="dot radius-full active" data-slide="1" aria-label="Slide 1"></button>
+                            <button class="dot dot radius-full" data-slide="2" aria-label="Slide 2"></button>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección DESTACADO-->
+        <section id="prominent">
+            <div class="container prominent-container box-grid items-center justify-center gap-700 ">
+                <div class="prom-info box-flex direction-column justify-around bg-beige-dark pad-900">
+                    <div class="prom-text">
+                        <h2 class="gap-bottom-400 size3 ">¡OFERTA!</h2>
+                        <p class="lh14 size1">
+                            <bold>Solo esta semana</bold>, disfruta de nuestro <bold>Menú
+                                Burger Premium</bold> a un precio especial. La calidad de siempre, con el sabor ahumado
+                            que tanto te gusta. No te conformes
+                            con menos, cómete el mundo con nosotros.
+                        </p>
+                    </div>
+                    <h2 class="size3">12,99€</h2>
+                    <div class="prom-btns">
+                        <button class="cta btn">COMPRAR</button>
+                        <button class="btn">Saber más</button>
+                    </div>
+                </div>
+                <div class="prom-img box-flex justify-center">
+                    <img src="./media/hamburguesa.jpg" alt="">
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección PRODUCTOS-->
+        <section id="products" class="bg-beige-dark">
+            <div class="container box-flex direction-column pad-top-700">
+                <h2 class="gap-bottom-700 gap-top-700">Nuestros productos destacados</h2>
+                <div class="products-grid box-grid bg-border">
+                    <!--Tarjetas producto-->
+                    
+                    <div class="product-card box-flex direction-column items">
+                        <img src="./media/hamburguesa.jpg" alt="">
+                        <div class="card-text">
+                                <h3 class="product-name">Hamburguesa de angus</h3>
+                                <h4>10,99€</h4>
+                                <p class="product-description">Descripción del producto</p>
+                                <div class="product-foot box-flex justify-between gap-top-400 gap-300">
+                                    <span>Saber más</span>
+                                    <button class="add-to-cart gap-right-300" type="button">Añadir</button>
+                                </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card box-flex direction-column items">
+                        <img src="./media/hamburguesa.jpg" alt="">
+                        <div class="card-text">
+                                <h3 class="product-name">Hamburguesa de angus</h3>
+                                <h4>10,99€</h4>
+                                <p class="product-description">Descripción del producto</p>
+                                <div class="product-foot box-flex justify-between gap-top-400 gap-300">
+                                    <span>Saber más</span>
+                                    <button class="add-to-cart gap-right-300" type="button">Añadir</button>
+                                </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card box-flex direction-column items">
+                        <img src="./media/hamburguesa.jpg" alt="">
+                        <div class="card-text">
+                                <h3 class="product-name">Hamburguesa de angus</h3>
+                                <h4>10,99€</h4>
+                                <p class="product-description">Descripción del producto</p>
+                                <div class="product-foot box-flex justify-between gap-top-400 gap-300">
+                                    <span>Saber más</span>
+                                    <button class="add-to-cart gap-right-300" type="button">Añadir</button>
+                                </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card box-flex direction-column items">
+                        <img src="./media/hamburguesa.jpg" alt="">
+                        <div class="card-text">
+                                <h3 class="product-name">Hamburguesa de angus</h3>
+                                <h4>10,99€</h4>
+                                <p class="product-description">Descripción del producto</p>
+                                <div class="product-foot box-flex justify-between gap-top-400 gap-300">
+                                    <span>Saber más</span>
+                                    <button class="add-to-cart gap-right-300" type="button">Añadir</button>
+                                </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card box-flex direction-column items">
+                        <img src="./media/hamburguesa.jpg" alt="">
+                        <div class="card-text">
+                                <h3 class="product-name">Hamburguesa de angus</h3>
+                                <h4>10,99€</h4>
+                                <p class="product-description">Descripción del producto</p>
+                                <div class="product-foot box-flex justify-between gap-top-400 gap-300">
+                                    <span>Saber más</span>
+                                    <button class="add-to-cart gap-right-300" type="button">Añadir</button>
+                                </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card box-flex direction-column items">
+                        <img src="./media/hamburguesa.jpg" alt="">
+                        <div class="card-text">
+                                <h3 class="product-name">Hamburguesa de angus</h3>
+                                <h4>10,99€</h4>
+                                <p class="product-description">Descripción del producto</p>
+                                <div class="product-foot box-flex justify-between gap-top-400 gap-300">
+                                    <span>Saber más</span>
+                                    <button class="add-to-cart gap-right-300" type="button">Añadir</button>
+                                </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card box-flex direction-column items">
+                        <img src="./media/hamburguesa.jpg" alt="">
+                        <div class="card-text">
+                                <h3 class="product-name">Hamburguesa de angus</h3>
+                                <h4>10,99€</h4>
+                                <p class="product-description">Descripción del producto</p>
+                                <div class="product-foot box-flex justify-between gap-top-400 gap-300">
+                                    <span>Saber más</span>
+                                    <button class="add-to-cart gap-right-300" type="button">Añadir</button>
+                                </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card box-flex direction-column items">
+                        <img src="./media/hamburguesa.jpg" alt="">
+                        <div class="card-text">
+                                <h3 class="product-name">Hamburguesa de angus</h3>
+                                <h4>10,99€</h4>
+                                <p class="product-description">Descripción del producto</p>
+                                <div class="product-foot box-flex justify-between gap-top-400 gap-300">
+                                    <span>Saber más</span>
+                                    <button class="add-to-cart gap-right-300" type="button">Añadir</button>
+                                </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card box-flex direction-column items">
+                        <img src="./media/hamburguesa.jpg" alt="">
+                        <div class="card-text">
+                                <h3 class="product-name">Hamburguesa de angus</h3>
+                                <h4>10,99€</h4>
+                                <p class="product-description">Descripción del producto</p>
+                                <div class="product-foot box-flex justify-between gap-top-400 gap-300">
+                                    <span>Saber más</span>
+                                    <button class="add-to-cart gap-right-300" type="button">Añadir</button>
+                                </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card box-flex direction-column items">
+                        <img src="./media/hamburguesa.jpg" alt="">
+                        <div class="card-text">
+                                <h3 class="product-name">Hamburguesa de angus</h3>
+                                <h4>10,99€</h4>
+                                <p class="product-description">Descripción del producto</p>
+                                <div class="product-foot box-flex justify-between gap-top-400 gap-300">
+                                    <span>Saber más</span>
+                                    <button class="add-to-cart gap-right-300" type="button">Añadir</button>
+                                </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card box-flex direction-column items">
+                        <img src="./media/hamburguesa.jpg" alt="">
+                        <div class="card-text">
+                                <h3 class="product-name">Hamburguesa de angus</h3>
+                                <h4>10,99€</h4>
+                                <p class="product-description">Descripción del producto</p>
+                                <div class="product-foot box-flex justify-between gap-top-400 gap-300">
+                                    <span>Saber más</span>
+                                    <button class="add-to-cart gap-right-300" type="button">Añadir</button>
+                                </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card box-flex direction-column items">
+                        <img src="./media/hamburguesa.jpg" alt="">
+                        <div class="card-text">
+                                <h3 class="product-name">Hamburguesa de angus</h3>
+                                <h4>10,99€</h4>
+                                <p class="product-description">Descripción del producto</p>
+                                <div class="product-foot box-flex justify-between gap-top-400 gap-300">
+                                    <span>Saber más</span>
+                                    <button class="add-to-cart gap-right-300" type="button">Añadir</button>
+                                </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- Panel lateral de checkout -->
+        <div class="checkout-overlay pos-fixed" id="checkout-overlay"></div>
+
+        <aside class="checkout-panel pos-fixed box-flex direction-column" id="checkout-panel" aria-hidden="true">
+        <div class="checkout-panel-header box-flex justify-between items-center gap-bottom-300">
+            <h3 class="checkout-panel-title">Resumen de compra</h3>
+            <button class="checkout-close" id="checkout-close" aria-label="Cerrar panel">✕</button>
+        </div>
+
+        <div class="checkout-panel-body">
+            
+            <p id="checkout-count">0 artículos</p>
+            
+            <div id="checkout-items" class="checkout-items gap-top-400 box-flex direction-column gap-400"></div>
+
+            <div class="checkout-summary gap-top-300 pad-top-300">
+            <p id="checkout-total">Total: €0.00</p>
+            </div>
+        </div>
+
+        <div class="checkout-panel-footer gap-top-400 box-flex direction-column">
+            <button class="btn btn-primary" type="button" id="checkout-pay">
+            Pagar
+            </button>
+        </div>
+        </aside>
+
+        <!-- Sección SOBRE NOSOTROS-->
+        <section id="about" class="">
+            <div class="about-container container box-grid gap-700 items-center">
+                <div class="about-carousel" role="region" aria-label="Galería de imágenes">
+                    <img src="./media/2.jpg" alt="Foto en la cocina" />
+                    <img src="./media/1.jpg" alt="Cocinera" />
+                    <img src="./media/fuera_local.jpg" alt="Personas disfrutando del local" />
+                </div>
+
+                <div class="about-text">
+                    <h2 id="about-title" class="section-title">Sobre Nosotros</h2>
+                    <p class="lh14 gap-bottom-700 size1">
+                        En Cómete el Mundo cocinamos a diario <bold>platos caseros</bold>, sin prisas ni procesos
+                        industriales,
+                        cuidando cada receta y cada ingrediente.
+                        Nuestro <bold>asador de pollos al carbón</bold> es uno de los pilares del negocio, preparado de
+                        forma
+                        tradicional para lograr un sabor intenso y natural. Junto a él, elaboramos guisos, asados y
+                        platos del día que recuerdan a la cocina de hogar.
+                        Cocinamos para quienes valoran el sabor auténtico, la calidad y la tranquilidad de saber que
+                        están comiendo bien.
+                    </p>
+                    <a href="#contact" class="btn btn-secondary">Saber más</a>
+                </div>
+            </div>
+        </section>
+        <!-- SECCION RESEÑAS-->
+        <section id="reviews" class="pad-top-400">
+            <h2 class="color-primary text-center gap-top-700 gap-bottom-700 container">Las reseñas de nuestro local</h2>
+            <div class="reviews container gap-700">
+                <div class="sk-ww-google-reviews" data-embed-id="25658752"></div>
+                <script src="https://widgets.sociablekit.com/google-reviews/widget.js" defer></script>
+            </div>
+        </section>
+
+        <!-- SECCION CONTACTO y UBICACIÓN -->
+        <section id="contact-location">
+
+        </section>
+    </main>
+    <footer>
+        <div class="footer bg-beige-dark pad-400 box-flex justify-center items-center gap-700">
+            <div id="button"></div>
+            <div class="container footer-grid">
+                <div class="footer-block">
+                    <h4>Cómete el mundo</h4>
+                    <p>
+                        En Cómete el Mundo encontrarás una selección variada de comida casera para llevar, que cambia
+                        según el día y la temporada.
+                    </p>
+                </div>
+                <div class="footer-block">
+                    <h5>Empresa</h5>
+                    <ul>
+                        <li><a href="#">Quiénes somos</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                        <li><a href="#">Regístrate</a></li>
+                    </ul>
+                </div>
+                <div class="footer-block">
+                    <h5>Productos</h5>
+                    <ul>
+                        <li><a href="#nueva-coleccion">Oferta de la semana</a></li>
+                        <li><a href="#jerseys">Menú del día</a></li>
+                        <li><a href="#accesorios">Nuestras recomendaciones</a></li>
+                    </ul>
+                </div>
+                <div class="footer-block">
+                    <h5>Información</h5>
+                    <ul>
+                        <li><a href="#">Envíos y recogidas</a></li>
+                        <li><a href="#">Ubicación</a></li>
+                        <li><a href="#">Política de privacidad</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container footer-bottom-inner">
+                    <span>COPYRIGHT © 2026 Cómete el Mundo</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Toast -->
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="./js/hero-carousel.js"></script>
+    <script src="./js/about-carousel.js"></script>
+    <script src="./js/shopping-cart.js"></script>
+</body>
+
+</html>
