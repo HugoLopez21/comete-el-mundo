@@ -3,7 +3,7 @@ header {
     top: 0; // Lo posiciona arriba del todo
     height: 5rem; //Altura del contenedor
     z-index: 999; // Orden de la capa
-    box-shadow: $container-shadow;
+    box-shadow: 0 10px 10px -2px rgba(0, 0, 0, 0.2); //Sombra debajo de la barra para contraste 
     font-size: 1.2rem;
     color: $color-dark;
 
@@ -34,7 +34,7 @@ header {
             }
 
             &:hover {
-                color: $color-primary; //Cambia de color al principal
+                color: $color-primary; 
                 &::after {
                     width: 100%; // Hace que aparezca la linea de subrallado
                 }
@@ -43,3 +43,47 @@ header {
     }
 }
 
+//Boton cesta 
+.cart-button {
+    position: relative;
+    background: $color-primary;
+    color: white;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+}
+
+//Animacion del boton al pasar por encima
+.cart-button:hover {
+    background: white;
+    transform: scale(1.05);
+    .cart-icon svg {
+        fill: $color-primary;
+    }
+}
+
+//Icono de cesta
+.cart-icon svg {
+    width: 22px;
+    height: 22px;
+    fill: white;
+}
+
+//Contador
+.cart-count {
+    position: absolute;
+    //Posicionar el contador arriba a la derecha
+    top: -4px;
+    right: -4px;
+    background: $color-secondary;
+    color: white;
+    font-size: 11px; //Tamaño del número
+    font-weight: 700; //Grosor
+    min-width: 18px;
+    height: 18px;
+    border-radius: 9999px; //Redondo
+    padding: 0 4px;
+    line-height: 1;
+} 

@@ -29,10 +29,11 @@
 .btn-secondary {
     //Estilo secundario de botones
     background: linear-gradient(135deg, $brand-border 0%, darken($brand-border, 5%) 100%);
-    color: $color-dark;
+    color: $color-dark; //Color del texto
     border: 1px solid $brand-border; //Añadir borde
 
     &:hover {
+        //Al pasar el raton 
         background: $color-light;
         transform: translateY(-2px);
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
@@ -42,12 +43,13 @@
 
 .cta {
     // Call to action button
-    background: linear-gradient(135deg, $color-secondary 0%, darken($color-secondary, 10%) 100%);
-    color: $color-white;
+    background: linear-gradient(135deg, $color-secondary 0%, darken($color-secondary, 10%) 100%); 
+    color: $color-white; //Letas blancas
 
     &:hover {
-        background: linear-gradient(135deg, lighten($color-secondary, 5%) 0%, $color-secondary 100%);
-        transform: translateY(-4px) scale(1.02);
-        box-shadow: 0 12px 20px -5px rgba($color-secondary, 0.4);
+        //Al pasar el raton 
+        background: linear-gradient(135deg, lighten($color-secondary, 5%) 0%, $color-secondary 100%); //Fondo con cegradado lineal
+        transform: translateY(-4px) scale(1.02); // Lo mueve y lo hace más grande
+        box-shadow: 0 12px 20px -5px rgba($color-secondary, 0.4); //Somra
     }
 }

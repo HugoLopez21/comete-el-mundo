@@ -1,18 +1,22 @@
+
+//Contenedor principal
 .footer{
     background-color: $brand-beige-dark;
     color:$color-dark;
     padding-top: 35px;
 }
+
+// Establece las columnas con grid
 .footer-grid{
     display:grid;
     gap: 32px;
-    grid-template-columns:minmax(0,1.3fr) repeat(3,minmax(0,1fr));
+    grid-template-columns:minmax(0,1.3fr) repeat(3,minmax(0,1fr)); // Cantidad de columnas y tamaño
     font-size:14px;
 }
 .footer-block h4,.footer-block h5{
-    text-transform:uppercase;
+    text-transform:uppercase; //Todo en mayusculas
     font-size: 12px;
-    letter-spacing: 2px;
+    letter-spacing: 2px; // Espacios entre letras
     margin: 0 0 8px;
 
 }
@@ -25,23 +29,25 @@
     margin:0;
     padding:0
 }
+
+// Item de la lista
 .footer-block li{
     margin-bottom: 3px;
 }
+
+// Links
 .footer-block a{
     color: $color-dark-text;
     text-decoration:none;
 }
+
 .footer-block a:hover{
     text-decoration:underline;
 }
 
+//Barra inferior al footer con el copyright
 .footer-bottom-inner{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
     font-size:10px;
     color: $color-dark-text;
-    gap:13px;
-    flex-wrap:wrap
+    flex-wrap:wrap; //Los elementos saltan del inea
 }

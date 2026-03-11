@@ -59,7 +59,6 @@ $gorko-config: (
     'output': 'responsive',
     'property': 'display'
   ),
-  // Alineación horizontal (Justify Content)
   'justify': ('items': ('start': 'flex-start',
       'end': 'flex-end',
       'center': 'center',
@@ -69,7 +68,6 @@ $gorko-config: (
     'output': 'standard',
     'property': 'justify-content'
   ),
-  // Alineación vertical (Align Items)
   'items': ('items': ('start': 'flex-start',
       'end': 'flex-end',
       'center': 'center',
@@ -78,19 +76,18 @@ $gorko-config: (
     'output': 'standard',
     'property': 'align-items'
   ),
-  // Dirección de Flex (Column o Row)
+
   'direction': ('items': ('column': 'column',
       'row': 'row'
     ),
     'output': 'standard',
     'property': 'flex-direction'
   ),
-  // Espaciado entre elementos (Gap) - Muy útil para Grid y Flex
+
   'gap': ('items': $gorko-size-scale,
     'output': 'standard',
     'property': 'gap'
   ),
-  // Radio de borde (Border Radius)
   'radius': ('items': ('sm': '0.125rem',
       'md': '0.25rem',
       'lg': '0.5rem',

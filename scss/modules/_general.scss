@@ -13,7 +13,7 @@
 html {
     scroll-behavior: smooth;
     background-color: $color-light;
-    font-family: "Poppins", sans-serif;
+    font-family: "Poppins", sans-serif; //Fuente principal
 }
 
 
@@ -21,6 +21,7 @@ html {
 h1,
 h2,
 h3{
+    //Define los estilos de los titulos
     font-size: 1.7rem;
     margin: 0;
     line-height: 120%;
@@ -28,6 +29,8 @@ h3{
     text-shadow: $title-shadow;
 }
 
+
+// Estilos del
 p {
     color: $color-dark-text;
 }
